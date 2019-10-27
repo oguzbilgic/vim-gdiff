@@ -3,7 +3,7 @@
 The missing :Gdiff command for Vim. Populates the QuickFix list with the output
 of git-diff command
 
-**Credit:** Originally written by @eloytoro 
+**Credit:** Originally written by @eloytoro
 https://github.com/tpope/vim-fugitive/issues/132#issuecomment-290644034
 
 ## Install
@@ -49,7 +49,7 @@ nnoremap [Q :cfirst<cr>
 nnoremap ]Q :clast<cr>
 ```
 
-Additionally, you can cycle the list using `fugitives` diff view. 
+Additionally, you can cycle the list using `fugitive` :Gdiffsplit command. 
 
 ```
 nnoremap ]r :%bd<CR>:cnext<CR>:Gdiffsplit master<CR>
