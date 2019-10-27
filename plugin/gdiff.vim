@@ -17,11 +17,17 @@ let s:git_status_dictionary = {
 function! s:get_diff_files(rev)
   let title = 'Gdiff '.a:rev
   let command = 'git diff --name-status '.a:rev
+  let lines = split(system(command), '\n')
+  let items = []
 
-  let items = map(
-        \ split(system(command), '\n'),
-        \ '{"filename":matchstr(v:val, "\\S\\+$"),"text":s:git_status_dictionary[matchstr(v:val, "^\\w")]}'
-        \ )
+  for line in lines
+    let filename = matchstr(line, "\\S\\+$")
+    let status = s:git_status_dictionary[matchstr(line, "^\\w")]
+    let item = { "filename": filename, "text": status }
+
+    call add(items, item)
+  endfor
+
   let list = {'title': title, 'items': items}
 
   call setqflist([], 'r', list)

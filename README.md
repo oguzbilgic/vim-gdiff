@@ -23,7 +23,7 @@ Run the command bellow to install the plugin:
 ## Usage
 
 ```
-:Gdiff {blob}
+:Gdiff {revision}
 ```
 
 ## Example
