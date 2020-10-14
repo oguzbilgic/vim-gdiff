@@ -11,7 +11,7 @@ https://github.com/tpope/vim-fugitive/issues/132#issuecomment-290644034
 Using `vim-plug` add the following line to your vimrc.
 
 ```vim
-Plug 'oguzbilgic/vim-gdiff
+Plug 'oguzbilgic/vim-gdiff'
 ```
 
 Run the command bellow to install the plugin: 
